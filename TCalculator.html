@@ -1,0 +1,139 @@
+<html>
+    <head>    
+        <title>TIP CALCULATOR</title>
+            <!-- Here Style tag is used for box1 -->
+            <style>   
+                * {
+                    margin: 0;
+                    padding: 10;
+                    font-family: 'josefin Sans', sans-serif;
+                }
+
+                #parent {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                #box1 {
+                    width: 350px;
+                    height: 300px;
+                    border: 1px solid black;
+                    border-radius: 10px 0px 0px 10px;
+                    display: block;
+                }
+
+                #box2 {
+                    width: 450px;
+                    height: 320px;
+                    border: 1px solid black;
+                    border-radius: 0px 10px 10px 0px;
+                }
+
+                label {
+                    display: block;
+                }
+
+                input {
+                    width: 350px;
+                    height: 40px;
+                    text-align: center;
+                }
+
+                .quantity button {
+                    width: 40px;
+                    height: 45px;
+                }
+
+                .quantity input {
+                    border: none;
+                    border: 1px solid black;
+                    text-align: center;
+                    width: 235px;
+                    height: 40px;
+                    font-size: 20px;
+                    color: #000;
+                    font-weight: 300;
+                }
+            </style>
+    </head>
+    <!-- body of html is start from here -->
+    <body>
+        <div id="parent">
+            <div id="box1">
+                
+                <label>Bill</label>
+                <input type="text" id="bill_amount" style="font-size:15pt;" onchange="calculateBill()"><br><br>
+
+                <label>Tip %</label>
+                <div class="quantity">
+                    <button id="decrement1" type="button">-</button>
+                    <input type="text" id="input1" value="0" readonly="">
+                    <button id="increment1" type="button">+</button>
+                </div>
+
+
+                <label>Number of people</label>
+                <div class="quantity">
+                    <button id="decrement2" type="button">-</button>
+                    <input type="text" id="input2" value="1" readonly=" ">
+                    <button id="increment2" type="button">+</button>
+                </div>
+
+            </div>
+
+
+            <div id="box2" class='col-container'>
+                <div class='col row-container'>
+                    <div class="row col-container">
+                        <div class="col">
+                            <h2>Tip</h2>
+                        </div>
+                        <div class="col">per person</div>
+                    </div>
+                    <div class="row">
+                        <h2 style="inline-size: initial;" id="tipperperson"></h2>
+                    </div>
+                </div>
+                <div class='col row-container'>
+                    <div class="row col-container">
+                        <div class="col">
+                            <h2>Total</h2>
+                        </div>
+                        <div class="col">per person</div>
+                    </div>
+                    <div class="row">
+                        <h2 style="text-align: left;"  id="billperperson"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+   <!-- Here Style tag is used for box2 -->
+    <style>
+
+        .col-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        .col {
+            width: 80%;
+            padding: 0 10px;
+        }
+
+        .row-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+        }
+    </style>
+
+    </body>
+    <!-- body tag ends here! -->
+
+    <!-- script tag is used to link the javascript file -->
+    <script src="Tcalculator.js"></script>
+
+</html>
